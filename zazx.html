@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <base target="_blank"/>
+    <title>在线咨询</title>
+        <link rel="stylesheet" type="text/css" href="css/zazx.css">
+        <link rel="stylesheet" type="text/css" href="http://s.goutong.baidu.com/webim/1501418991/asset/webim/css/main.css">
+        <script type="text/javascript">
+    var BEFORE_LOAD_TIME = (new Date()).getTime();
+    </script>
+    <script src="js/jquery-1.10.2.min_f2fb5194.js"></script>
+    <script src="js/esl.js"></script>
+    <script>
+        require.config({
+        'baseUrl': 'http://s.goutong.baidu.com/webim/1499149164/asset/',
+        'packages': [
+            {
+                'name': 'im-core',
+                'location': '../dep/im-core/0.2.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'im-lib',
+                'location': '../dep/im-lib/0.1.0/asset/pc',
+                'main': 'main'
+            },
+            {
+                'name': 'im-filter',
+                'location': '../dep/im-filter/0.1.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'im-editor',
+                'location': '../dep/im-editor/0.1.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'etpl',
+                'location': '../dep/etpl/3.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'bull',
+                'location': '../dep/bull/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'webuploader',
+                'location': '../dep/webuploader/',
+                'main': 'webuploader'
+            },
+            {
+                'name': 'common',
+                'location': './common'
+            }
+        ]
+    });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <!--
+        <img src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/clhead.png">
+        -->
+                                <div class="company-container" style="padding-top: 9px;">
+                                            <span class="company">
+                谁的咖啡(北京)北京国际餐饮管理有限公司
+            </span><br/>
+            <span class="tel">
+                400-613-6237
+            </span>
+                    </div>
+    </div>
+    <div id="body">
+        <div id="sidebar" class="aside">
+            <div class="aside-wrap">
+                <!-- 暂定内容, 使用style -->
+                <div class="business-info" style="text-align: center;padding: 10px 5px;">
+                    <div id="bannerContainer">
+                                                <!-- banner不为空 -->
+                                                    <!-- 只有一张图片，直接渲染 -->
+                                                                                                                                                                                                                    <img src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/bridge-logo.png">
+                                                                                                                                                                                                                        </div>
+                                            <div class="slogan-cont">
+                            <p style="color: #000; font-size:13px">欢迎您的光临，我们将竭诚为您服务</p>
+                        </div>
+                                    </div>
+                <!-- end -->
+                <!-- 文件传输 -->
+                <div id="fileTransfer" class="file_transfer file_transfer_hide">
+                    <h3 class="file_transfer_title">文件传输</h3>
+                    <ul class="file_transfer_content"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main" class="main">
+
+            <div id="message" class="message">
+                                <div id="status" class="info"><span>正在等待客服接起...</span></div>
+            </div>
+
+            <div id="toolbar" class="toolbar">
+                <div class="h-split-m" style="visibility: hidden;">
+                    <div class="h-split-l"><div class="h-split-r"><!----></div></div>
+                </div>
+                <div class="font sub-bar">
+                    <select class="family">
+                        <option value="宋体">宋体</option>
+                        <option value="arial,微软雅黑">微软雅黑</option>
+                        <option value="arial,楷体">楷体</option>
+                        <option value="arial,黑体">黑体</option>
+                        <option value="arial,隶书">隶书</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Roman">Roman</option>
+                    </select>
+                    <select class="size">
+                        <option value="8pt">8</option>
+                        <option value="10pt" selected>10</option>
+                        <option value="12pt">12</option>
+                        <option value="14pt">14</option>
+                        <option value="16pt">16</option>
+                        <option value="18pt">18</option>
+                        <option value="24pt">24</option>
+                    </select>
+                    <span class="bold" title="加粗">B</span>
+                    <span class="italic" title="斜体">I</span>
+                    <span class="underline" title="下划线">U</span>
+                    <span class="font-color" title="字体颜色"></span>
+                </div>
+                <div class="color sub-bar sub-bar-2">
+                    <ul class="color-container clear-fix">
+                        <li class="color-item-wrapper color-item-select" style="border-color:#000000">
+                            <span class="color-item" style="background-color:#000000" color="#000000"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#7f8003">
+                            <span class="color-item" style="background-color:#7f8003" color="#7f8003"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#808080">
+                            <span class="color-item" style="background-color:#808080" color="#808080"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#408082">
+                            <span class="color-item" style="background-color:#408082" color="#408082"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#420140">
+                            <span class="color-item" style="background-color:#420140" color="#420140"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#efefef">
+                            <span class="color-item" style="background-color:#efefef" color="#efefef"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#3f0100">
+                            <span class="color-item" style="background-color:#3f0100" color="#3f0100"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#814000">
+                            <span class="color-item" style="background-color:#814000" color="#814000"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#004300">
+                            <span class="color-item" style="background-color:#004300" color="#004300"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#010576">
+                            <span class="color-item" style="background-color:#010576" color="#010576"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#00003f">
+                            <span class="color-item" style="background-color:#00003f" color="#00003f"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#40027e">
+                            <span class="color-item" style="background-color:#40027e" color="#40027e"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#7c0200">
+                            <span class="color-item" style="background-color:#7c0200" color="#7c0200"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#fd8100">
+                            <span class="color-item" style="background-color:#fd8100" color="#fd8100"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#00ff04">
+                            <span class="color-item" style="background-color:#00ff04" color="#00ff04"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#02fffb">
+                            <span class="color-item" style="background-color:#02fffb" color="#02fffb"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#7e81bf">
+                            <span class="color-item" style="background-color:#7e81bf" color="#7e81bf"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#ff01fa">
+                            <span class="color-item" style="background-color:#ff01fa" color="#ff01fa"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#fe0100">
+                            <span class="color-item" style="background-color:#fe0100" color="#fe0100"></span>
+                        </li>
+                        <li class="color-item-wrapper" style="border-color:#feff00">
+                            <span class="color-item" style="background-color:#feff00" color="#feff00"></span>
+                        </li>
+                    </ul>
+                    <div class="c-tip-arrow">
+                        <em></em>
+                        <ins></ins>
+                    </div>
+                </div>
+                <div class="face sub-bar">
+                    <ul class="face-container clear-fix">
+                        <li class="face-item" face="1e376a99d4059562772aad9ac065fd71" extension="png" alt="微笑"></li>
+                        <li class="face-item" face="c5ce7689438e5ee92c5942d4885fc198" extension="gif" alt="大笑"></li>
+                        <li class="face-item" face="d2ff68289e44c32d61f17e9cfb8f781a" extension="gif" alt="偷笑"></li>
+                        <li class="face-item" face="564396330c9e704c27533dd0a9f38d56" extension="gif" alt="憨笑"></li>
+                        <li class="face-item" face="33991a718d98b7bde46d1656acd1d84f" extension="gif" alt="得意"></li>
+                        <li class="face-item" face="1eac4820cb2162ad0ea9050f730701ea" extension="gif" alt="可爱"></li>
+                        <li class="face-item" face="afb7b910b894d8638a5f5f60d66080bb" extension="gif" alt="害羞"></li>
+                        <li class="face-item" face="6eeeea78151b0d992342b5d974ea9748" extension="gif" alt="乖"></li>
+                        <li class="face-item" face="3567d74d273570047d563a52487b458d" extension="png" alt="淘气"></li>
+                        <li class="face-item" face="17a002956048d2cc3e7136a60995f4c5" extension="png" alt="调皮"></li>
+                        <li class="face-item" face="6d177c2e8caa44b47950afd1c2d94ea1" extension="gif" alt="流泪"></li>
+                        <li class="face-item" face="f2468ad19982b6109525f86e60da0a40" extension="gif" alt="大哭"></li>
+                        <li class="face-item" face="f4075f32764665658fe69d475536685f" extension="png" alt="撇嘴"></li>
+                        <li class="face-item" face="97aac5ef30ca5c313f5055d3303a901a" extension="gif" alt="闭嘴"></li>
+                        <li class="face-item" face="ea12132c217e29cc32a70ef2123baa55" extension="gif" alt="嘘"></li>
+                        <li class="face-item" face="0fd150d82ae7f2d174c9601f9ee09247" extension="gif" alt="鄙视"></li>
+                        <li class="face-item" face="8484e2fcd13826ff6d311fa23f6133f1" extension="png" alt="傲慢"></li>
+                        <li class="face-item" face="46e7c6b53203f314943f5af66f6b9daf" extension="gif" alt="白眼"></li>
+                        <li class="face-item" face="8c1066c3a4fc9115b46e3ae72a19e3f4" extension="gif" alt="思考"></li>
+                        <li class="face-item" face="fd2bdb138346f328795d068df107ec90" extension="gif" alt="困"></li>
+                        <li class="face-item" face="d6c03a77dc812595b2f41fdde34d05a6" extension="gif" alt="睡"></li>
+                        <li class="face-item" face="fd2f51cd66989306299d8ad075abbc89" extension="gif" alt="汗"></li>
+                        <li class="face-item" face="b143058415f04e4f21302736326fb37c" extension="gif" alt="尴尬"></li>
+                        <li class="face-item" face="c6fbb9628da63dc12c9a1fef25dea934" extension="png" alt="惊讶"></li>
+                        <li class="face-item" face="4a19620c98f2d809ea46900a0b552d7c" extension="gif" alt="惊恐"></li>
+                        <li class="face-item" face="7e9cbda5e0b325f01d478f8e4adf69b2" extension="gif" alt="疑问"></li>
+                        <li class="face-item" face="18c3ccd14d992d8e5aa30acfe670d42f" extension="gif" alt="晕"></li>
+                        <li class="face-item" face="d237de97c3277b7749ce839db39b0649" extension="gif" alt="敲打"></li>
+                        <li class="face-item" face="f2e7df81f1e48584a82c82f99d266b7c" extension="png" alt="难过"></li>
+                        <li class="face-item" face="3ced67ed7484ec180470b6cf8f0e44b3" extension="gif" alt="委屈"></li>
+                        <li class="face-item" face="5c0aacf4ce01a07aa72ced20edfb1fb0" extension="gif" alt="色"></li>
+                        <li class="face-item" face="fd78f2b8f16086a940e90f370b2bb0d4" extension="gif" alt="抓狂"></li>
+                        <li class="face-item" face="c6d1d4982260a4bad13aab943f7799f0" extension="gif" alt="愤怒"></li>
+                        <li class="face-item" face="658d87d64e128385f28a59c15aa8cb91" extension="gif" alt="吐"></li>
+                        <li class="face-item" face="ae2b37bc2c8186a5dad63a583ad278cb" extension="png" alt="衰"></li>
+                        <li class="face-item" face="b6db7f3a9e8a9c864046eb0eaa15942d" extension="gif" alt="再见"></li>
+                        <li class="face-item" face="3890735fdd2f25319367532f660bbcd2" extension="png" alt="左拥抱"></li>
+                        <li class="face-item" face="28a6dcccc96ad6d3082a0ff5554bebd6" extension="png" alt="右拥抱"></li>
+                        <li class="face-item" face="eb06e9170d5b470f124d3943f537e714" extension="png" alt="闪人"></li>
+                        <li class="face-item" face="d32893593db6217773e102bd694db4d8" extension="gif" alt="刀"></li>
+                        <li class="face-item" face="11d117a72c9cd5ffa2110c31cb4a385b" extension="png" alt="吻"></li>
+                        <li class="face-item" face="7f73aeabe8ddb4bb23e06de4e6072e40" extension="png" alt="爱情"></li>
+                        <li class="face-item" face="b5fbcef53bf2d695db6bd48faa326585" extension="gif" alt="心碎"></li>
+                        <li class="face-item" face="5bc342dfc4b92d4c0cad3a4207a99380" extension="png" alt="鲜花"></li>
+                        <li class="face-item" face="9ef7d4c187f298a10953f5096cbe9162" extension="png" alt="枯萎"></li>
+                        <li class="face-item" face="f08d998e04027d92feaf0f8667bb016c" extension="gif" alt="胜利"></li>
+                        <li class="face-item" face="f143718613f47bb929e7134b2457f260" extension="png" alt="ok"></li>
+                        <li class="face-item" face="2f5113cfd0a33bfec485c222051db205" extension="gif" alt="大拇指"></li>
+                        <li class="face-item" face="2ea09b4e887a6871e22d6e52a014179c" extension="gif" alt="弱"></li>
+                        <li class="face-item" face="a21bf8c01f41b9148b81aa1b53fb3a0e" extension="gif" alt="握手"></li>
+                        <li class="face-item" face="47198bf11c75a03e6249a1ccc1064bce" extension="gif" alt="蛋糕"></li>
+                        <li class="face-item" face="d6bde4b624846fd08500053358e154ae" extension="gif" alt="咖啡"></li>
+                        <li class="face-item" face="e3aac3a4e1e36a02959f62d9bbcab7ac" extension="png" alt="吃饭"></li>
+                        <li class="face-item" face="75132ac5d361fd71a0b8acc6d99b7692" extension="png" alt="太阳"></li>
+                        <li class="face-item" face="5bbb83756e3e652b43f9f03d638718b4" extension="png" alt="月亮"></li>
+                        <li class="face-item" face="dcb31cac1b742034e9cdc5254f309d00" extension="png" alt="星星"></li>
+                        <li class="face-item" face="490183579bb95ab6eee1d695cdaef213" extension="gif" alt="便便"></li>
+                        <li class="face-item" face="ede07ac7f02fbc613381069a77ff1b5c" extension="png" alt="猪头"></li>
+                        <li class="face-item" face="eeb68b5c092155df924e69b2a1de21f9" extension="png" alt="钱"></li>
+                        <li class="face-item" face="33037bedc05c33f5998f875c608d4ba1" extension="png" alt="HI"></li>
+                      </ul>
+                      <div class="c-tip-arrow">
+                          <em></em>
+                          <ins></ins>
+                      </div>
+                </div>
+                <div class="bar">
+                    <button class="btn-font" title="文字设置">文字设置</button>
+                    <button class="btn-face" title="发送表情">发送表情</button>
+                    <button class="btn-shake" title="发送抖屏">发送抖动</button>
+                    <div class="btn-img">
+                        <form id="uploadForm">
+                            <input id="uploadInput" name="file" type="file" onchange="selectImage()" title="发送图片">
+                        </form>
+                    </div>
+                    <button class="btn-cut" title="发送截图">发送截图</button>
+                    <div id="fileUploader" class="btn-file btn-file-disabled" title="发送文件"></div>
+                </div>
+            </div>
+
+            <div class="input">
+
+                <div id="editor" class="editor"></div>
+
+                <div id="send-wrap" class="send send-disabled">
+
+                    <button>发送</button>|<span class="hotkey-set up"></span>
+
+                    <ul class="hotkey-menu">
+                        <li data-hotkey="e" class="item-e selected">
+                            <span></span>按Enter键发送消息
+                        </li>
+                        <li data-hotkey="ce" class="item-ce">
+                            <span></span>按Ctrl+Enter键发送消息
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- 解决ie6下，绝对定位元素相邻浮动元素宽度引起的不可见bug -->
+        <!-- [if IE 6]>
+        <div></div>
+        <![endif] -->
+        <!-- 收起按钮 -->
+        <div id="folder" class="unfold" style="display:none;"></div>
+    </div>
+    <!-- 音乐播放器,url:/webim_src/src/webim/swf/sound.swf -->
+    <div id="sound-container" data-swf="http://p.qiao.baidu.com/cps/flash/sound.swf"></div>
+    <!-- 加载img 获取其路径 -->
+    <div style="display:none;">
+        <img id="custom" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/custom.png">
+        <img id="sub" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/sub-0.png">
+        <img id="fail" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/fail.png">
+        <img id="loading" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/loading.gif">
+        <img id="notifyIcon" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/sub-0.png">
+        <form id="imgViewer" action="imageviewer" method="post" target="_blank">
+            <input id="imgViewerInput" name="imgsrc">
+        </form>
+        <span id="webUploaderSwf" data-swf="http://p.qiao.baidu.com/cps/flash/Uploader.swf"></span>
+        <span id="businessBanner"></span>
+        <!-- banner大于一张用js渲染 -->
+                <!-- 默认皮肤logo -->
+                <img id="skinLogo" src="http://s.goutong.baidu.com/webim/1499149164/asset/webim/img/bridge-logo.png">
+            </div>
+    <!-- 访客下载文件 -->
+    <iframe style="display:none;" id="visitorDownload" name="visitorDownload" frameborder="0"></iframe>
+    <script>
+        require(['webim/entry'], function(main) {
+            main.init({"eid":"7750979","queuing":"<p>欢迎光临！您已经进入服务队列，请您稍候，马上为您转接您的在线咨询顾问。</p>","authToken":"bridge","urlRoot":"http://p.qiao.baidu.com/cps/","platform":"0","tid":"-1","route":"1","ttype":"1","siteid":"5536013","from":1,"authType":4,"bid":"149828127495276551"});
+        });
+    </script>
+</body>
+</html>

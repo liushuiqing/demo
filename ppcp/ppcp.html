@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>品牌产品分类-谁的咖啡官方网站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--移动设备优先            视窗                                       宽度=设备宽度                   缩放比例1倍                   最大缩放比例1倍                禁止用户缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="icon" href="img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="css/ppcp.css"/>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/angular.js"></script>
+    <script src="js/angular-ui-bootstrap.js"></script>
+    <link href="js/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+    function show(num){
+    	 $('.listul ul').removeClass('show');
+    	$('.listul'+num).addClass('show');
+        console.log('.listul'+num)
+    }
+        angular.module('ui.bootstrap.demo', ['ui.bootstrap']);
+        angular.module('ui.bootstrap.demo').controller('PaginationDemoCtrl', function ($scope, $log) {
+            $scope.pageChanged = function() {
+                show($scope.bigCurrentPage);
+            };
+            $scope.maxSize = 3;
+            $scope.bigTotalItems = 60;
+            $scope.bigCurrentPage = 1;
+        });
+    </script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="logo">
+				<a href="../index.html"><img src="img/logo.png"/></a>
+			</div>
+			<div class="aa">
+				
+				<p>24小时热线</p>
+				<p>400 613 6237</p>
+			</div>
+			<nav class="clearfix">	
+				<li><a href="../index.html">网站首页</a></li>
+				<li><a href="../gywm/gywm.html">关于我们</a></li>
+				<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+				<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+				<li><a href="../alzs/alzs.html">案例展示</a></li>
+				<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+				<li><a href="../zxly/zxly.html">在线留言</a></li>
+			</nav>
+		</div>
+	</header>
+	<div class="home">
+		<img src="img/2.png"/>
+		<div class="aa">
+			<p>START YOUR DAY WITH THE </p>
+			<p>BEST CUP OF COFFEE</p>
+		</div>
+	</div>
+	 <div class="wrap" id='wrap'>
+				 <ul id="pic">
+					 <li><img src="img/24.jpeg" alt=""></li>
+					 <li><img src="img/26.png" alt=""></li>
+				 </ul>
+				 <ol id="list">
+				 	<li class="on">1</li>
+					<li>2</li>
+				</ol>
+			</div>
+			
+	<script type="text/javascript">
+				 window.onload=function(){
+				 var wrap=document.getElementById('wrap'),
+				 pic=document.getElementById('pic').getElementsByTagName("li"),
+				 list=document.getElementById('list').getElementsByTagName('li'),
+				 index=0,
+				 timer=null;
+				 
+				 // 定义并调用自动播放函数
+				 timer = setInterval(autoPlay, 2000);
+				 
+				 // 鼠标划过整个容器时停止自动播放
+				 wrap.onmouseover = function () {
+				 clearInterval(timer);
+				 }
+				 
+				 // 鼠标离开整个容器时继续播放至下一张
+				 wrap.onmouseout = function () {
+				 timer = setInterval(autoPlay, 2000);
+				 }
+				 // 遍历所有数字导航实现划过切换至对应的图片
+				 for (var i = 0; i < list.length; i++) {
+				 list[i].onmouseover = function () {
+				 clearInterval(timer);
+				 index = this.innerText - 1;
+				 changePic(index);
+				 };
+				 };
+				 
+				 function autoPlay () {
+				 if (++index >= pic.length) index = 0;
+				 changePic(index);
+				 }
+				 
+				 // 定义图片切换函数
+				 function changePic (curIndex) {
+				 for (var i = 0; i < pic.length; ++i) {
+				 pic[i].style.display = "none";
+				 list[i].className = "";
+				 }
+				 pic[curIndex].style.display = "block";
+				 list[curIndex].className = "on";
+				 }
+				 
+				 };
+				 
+			 </script>
+	
+	
+	<section>
+		<div class="section">	
+			<ul class="clearfix">
+				<li></li>
+				<li><a href="../ppcp/kf.html">咖啡</a></li>
+				<li><a href="../ppcp/tsyp.html">特色饮品</a></li>
+				<li><a href="../ppcp/tp.html">甜品</a></li>
+				<li><a href="../ppcp/np.html">牛排</a></li>
+				<li><a href="../ppcp/ps.html">披萨</a></li>
+				<li><a href="../ppcp/ymjf.html">意面焗饭</a></li>
+				<li></li>
+			</ul>
+		</section>
+			<div>
+				<div class="listul">
+	<ul class="listul1 show clearfix">
+		<li>
+			<a href="#">
+				<img src="images/7_03.gif" />
+			</a>
+			<span>海鲜满溢披萨</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_05.gif" />
+			</a>
+			<span>蘑菇火腿披萨</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_07.gif" />
+			</a>
+			<span>蘑菇荟萃披萨</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_12.gif" />
+			</a>
+			<span>美式摩卡</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_13.gif" />
+			</a>
+			<span>冰淇淋面包</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_14.gif" />
+			</a>
+			<span>草莓冰淇淋华夫</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_18.gif" />
+			</a>
+			<span>草莓拿破仑</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_19.gif" />
+			</a>
+			<span>黑森林蛋糕</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_20.gif" />
+			</a>
+			<span>焦糖肉面包</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_24.gif" />
+			</a>
+			<span>抹茶雪花冰</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_24.gif" />
+			</a>
+			<span>抹茶雪花冰</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/7_25.gif" />
+			</a>
+			<span>暖心蛋糕</span>
+		</li>
+	</ul>
+	<ul class="listul2 clearfix">
+		<li>
+			<a href="#">
+				<img src="images/7_26.gif" />
+			</a>
+			<span>巧克力冰淇淋华夫</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/1_03.gif" />
+			</a>
+			<span>五谷养生雪花冰</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/1_05.gif" />
+			</a>
+			<span>水果球西米露</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/1_07.gif" />
+			</a>
+			<span>瑞士香颂</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/1_12.gif" />
+			</a>
+			<span>雪吻布朗尼</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/1_13.gif" />
+			</a>
+			<span>甜点笼组合</span>
+
+		</li>
+
+		<li>
+			<a href="#">
+				<img src="images/4_03.gif" />
+			</a>
+			<span>提拉米苏蛋糕</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_05.gif" />
+			</a>
+			<span>紫薯芝士蛋糕</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_07.gif" />
+			</a>
+			<span>草莓气泡水</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_12.gif" />
+			</a>
+			<span>玫瑰草莓奶昔</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_13.gif" />
+			</a>
+			<span>蜜桃乌龙奶盖</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_14.gif" />
+			</a>
+			<span>抹茶乌龙奶茶盖</span>
+
+		</li>
+
+	</ul>
+	<ul class="listul3 clearfix">
+		<li>
+			<a href="#">
+				<img src="images/4_18.gif" />
+			</a>
+			<span>茉香青橘</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_19.gif" />
+			</a>
+			<span>木瓜牛奶饮</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/4_20.gif" />
+			</a>
+			<span>柠檬冰红茶</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/3_03.gif" />
+			</a>
+			<span>奇异果冰沙</span>
+
+		</li>
+
+		<li>
+			<a href="#">
+				<img src="images/3_05.gif" />
+			</a>
+			<span>奇异果王国莫吉托</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/3_07.gif" />
+			</a>
+			<span>青柠气泡水</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/3_12.gif" />
+			</a>
+			<span>香芒气泡水</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/3_13.gif" />
+			</a>
+			<span>新鲜水果茶</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/3_14.gif" />
+			</a>
+			<span>黑椒牛柳炒意面</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_03.gif" />
+			</a>
+			<span>奶油贝柱意面</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_05.gif" />
+			</a>
+			<span>奶油蘑菇炒意面</span>
+
+		</li>
+
+		<li>
+			<a href="#">
+				<img src="images/2_12.gif" />
+			</a>
+			<span>芦笋炒饭</span>
+
+		</li>
+	</ul>
+	<ul class="listul4 clearfix">
+		<li>
+			<a href="#">
+				<img src="images/2_13.gif" />
+			</a>
+			<span>哈尔滨红肠披萨</span>
+
+		</li>
+
+		<li>
+			<a href="#">
+				<img src="images/2_14.gif" />
+			</a>
+			<span>鲜虾满溢披萨</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_18.gif" />
+			</a>
+			<span>萨拉米肠脆底披萨</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_19.gif" />
+			</a>
+			<span>夏威夷风情披萨</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_20.gif" />
+			</a>
+			<span>谁的咖啡至尊披萨</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_24.gif" />
+			</a>
+			<span>T骨牛排</span>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_25.gif" />
+				<span>顶级台塑牛小排</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/2_26.gif" />
+			</a>
+			<span>法式鳕鱼配菲力牛排</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/6_03.gif" />
+			</a>
+			<span>法式鸡排</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/6_05.gif" />
+			</a>
+			<span>澳洲沙朗牛排</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/6_07.gif" />
+			</a>
+			<span>鹅肝配菲力牛排</span>
+
+		</li>
+
+		<li>
+			<a href="#">
+				<img src="images/6_12.gif" />
+			</a>
+			<span>黑椒牛排</span>
+
+		</li>
+	</ul>
+	<ul class="listul5 clearfix">
+		
+		<li>
+			<a href="#">
+				<img src="images/6_13.gif" />
+			</a>
+			<span>碳烤厚三角牛排</span>
+
+		</li>
+		<li>
+			<a href="#">
+				<img src="images/6_14.gif" />
+			</a>
+			<span>肉眼牛排</span>
+
+		</li>
+
+	</ul>
+</div>
+				<div ng-app="ui.bootstrap.demo" ng-controller="PaginationDemoCtrl" style="width: 300px; margin: 0 auto;">
+				<ul uib-pagination total-items="bigTotalItems" ng-change="pageChanged()" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm"
+				    boundary-link-numbers="true"></ul>
+				</div>
+			</div>		
+	<footer>
+		<div class="foo clearfix">
+			<div class="footer_l">
+				<img src="img/27.png"/>
+			</div>
+			<div class="footer_r">
+				<ul class="clearfix">
+					<li><a href="../index.html">网站首页</a></li>
+					<li><a href="../gywm/gywm.html">关于我们</a></li>
+					<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+					<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+					<li><a href="../alzs/alzs.html">案例展示</a></li>
+					<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+					<li><a href="../zxly/zxly.html">联系我们</a></li>
+				</ul>
+				<ul class="clearfix">
+					<li><a href="#">谁的咖啡旗下品牌:</a></li>
+					<li><a href="../index.html">谁的咖啡</a></li>
+					<li><a href="#">韩式悦饮</a></li>
+				</ul>
+				<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国品牌连锁热线：400 613 6237   京ICP备17000034号<p>
+			</div>
+		</div>
+	</footer>
+	<div class="icp">
+		<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国</p>
+		<p>品牌连锁热线：400 613 6237</p>
+		<p>京ICP备17000034号</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	// JavaScript Document
+//浮动广告图片
+var floatAdImg = "img/001.jpg";
+//浮动侧栏图片
+var floatSideImg = "img/002.png";
+//打开在线沟通
+function open_online()
+{
+ window.open('zazx.html');
+}
+
+//浮动广告
+document.writeln("<div id=\"floatAd\" style=\" position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 2147483647; left: 56.5%; margin-left: -240px !important; top: 60%; margin-top: -210px !important; background:url("+floatAdImg+") no-repeat; width:300px; height:244px; cursor:pointer; display:none; \">");
+document.writeln("<div onclick=\"closeFAd();\" style=\" width:26px; height:26px; float:right;color:#fff; text-align:center;font-size: 16px;font-family: '微软雅黑';\">X</div>");
+document.writeln("<div style=\"width:300; height:244; float:right;\">");
+document.writeln("<p style=\"color: #fff;width: 150px; font-size: 16px;font-family: '微软雅黑';line-height: 20px;margin-top: 50px;\">欢迎来到谁的咖啡，请问有什么可以帮您？</p>");
+document.writeln("<a onclick=\"closeFAd();\" style=\"background:#fff;font-family: '微软雅黑';position: absolute; right: 100px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >稍后再说</a>")
+document.writeln("<a onclick=\"open_online();\" style=\"background:#FECB2E;font-family: '微软雅黑';position: absolute; right: 12px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >现在咨询</a>")
+document.writeln("</div>");
+document.writeln("</div>");
+//浮动侧栏
+document.writeln("<div id=\"floatAd1\" style=\" width:190px; height:103px; position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 99999; right:1%; top:40vh; background:url("+floatSideImg+");cursor:pointer;\" onclick=\"open_online();\"></div>");
+//关闭浮动广告
+function closeFAd()
+{
+ document.getElementById('floatAd').style.display = 'none';
+}
+//打开浮动广告
+function showFAd()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+//打开浮动窗口
+function showFloat()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+
+setTimeout(showFAd,2000);
+</script>

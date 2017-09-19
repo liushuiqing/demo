@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>合作方式-谁的咖啡官方网站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--移动设备优先            视窗                                       宽度=设备宽度                   缩放比例1倍                   最大缩放比例1倍                禁止用户缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="icon" href="img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jmfc.css"/>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="logo">
+				<a href="../index.html"><img src="img/logo.png"/></a>
+			</div>
+			<div class="aa">
+				
+				<p>24小时热线</p>
+				<p>400 613 6237</p>
+			</div>
+			<nav class="clearfix">	
+				<li><a href="../index.html">网站首页</a></li>
+				<li><a href="../gywm/gywm.html">关于我们</a></li>
+				<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+				<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+				<li><a href="../alzs/alzs.html">案例展示</a></li>
+				<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+				<li><a href="../zxly/zxly.html">在线留言</a></li>
+			</nav>
+		</div>
+	</header>
+	<div class="home">
+		<img src="img/3.png"/>
+		<div class="aa">
+			<p>START YOUR DAY WITH THE </p>
+			<p>BEST CUP OF COFFEE</p>
+		</div>
+	</div>
+	 <div class="wrap" id='wrap'>
+				 <ul id="pic">
+					 <li><img src="img/24.jpeg" alt=""></li>
+					 <li><img src="img/26.png" alt=""></li>
+				 </ul>
+				 <ol id="list">
+				 	<li class="on">1</li>
+					<li>2</li>
+				</ol>
+			</div>
+			
+	<script type="text/javascript">
+				 window.onload=function(){
+				 var wrap=document.getElementById('wrap'),
+				 pic=document.getElementById('pic').getElementsByTagName("li"),
+				 list=document.getElementById('list').getElementsByTagName('li'),
+				 index=0,
+				 timer=null;
+				 
+				 // 定义并调用自动播放函数
+				 timer = setInterval(autoPlay, 2000);
+				 
+				 // 鼠标划过整个容器时停止自动播放
+				 wrap.onmouseover = function () {
+				 clearInterval(timer);
+				 }
+				 
+				 // 鼠标离开整个容器时继续播放至下一张
+				 wrap.onmouseout = function () {
+				 timer = setInterval(autoPlay, 2000);
+				 }
+				 // 遍历所有数字导航实现划过切换至对应的图片
+				 for (var i = 0; i < list.length; i++) {
+				 list[i].onmouseover = function () {
+				 clearInterval(timer);
+				 index = this.innerText - 1;
+				 changePic(index);
+				 };
+				 };
+				 
+				 function autoPlay () {
+				 if (++index >= pic.length) index = 0;
+				 changePic(index);
+				 }
+				 
+				 // 定义图片切换函数
+				 function changePic (curIndex) {
+				 for (var i = 0; i < pic.length; ++i) {
+				 pic[i].style.display = "none";
+				 list[i].className = "";
+				 }
+				 pic[curIndex].style.display = "block";
+				 list[curIndex].className = "on";
+				 }
+				 
+				 };
+				 
+			 </script>
+	
+	
+	<section>
+		<div class="section">	
+			<ul class="clearfix">
+				<li></li>
+				<li><a href="../hzfs/stjm.html">受托加盟</a></li>
+				<li><a href="../hzfs/jmfc.html">加盟扶持</a></li>
+				<li><a href="../hzfs/jmlc.html">加盟流程</a></li>
+				<li><a href="../hzfs/zycf.html">中央厨房</a></li>
+				<li><a href="../zxly/zxly.html">在线留言</a></li>
+				<li></li>
+			</ul>
+			<div class="wen1 clearfix">
+				<h3>【开店前保障】</h3>
+				<p>1、选址评估：由加盟合作方推荐新店铺，谁的咖啡公司开发团队对新店铺商圈进行详细的市场调查，分析店铺商圈附近住宅区、写字楼、学校、流动人口以及周边的消费情况；把握同行业分布情况，作出可行性市场分析。</p>
+				<p>2、投资分析：谁的咖啡店铺运营团队将协助您制定精确的投资分析，提交给您开店投资整体预算及可行性报告。</p>
+				<p>3、店面设计：谁的咖啡总部市场部对合作商店面进行布局规划、效果图、施工图。并在后期装修施工阶段提供不间断的工程监理服务。</p>
+				<p>4、采购预算：根据投资方和营业需求以及店面面积，谁的咖啡总部会配送一套开业性价比最高的设备。</p>
+				<p>5、推广计划：谁的咖啡店铺运营团队根据加盟合作方店铺具体情况制定并提交给您一份店铺开业及前期推广策划方案，让谁的咖啡每位合作方有备而战。</p>
+				<p>6、专业培训：谁的咖啡店铺运营团队为加盟合作方提供为期2—4周的总部专业培训，培训形式以直营店实习的形式展开，培训人员待通过最终考核后，方可到各加盟店工作。</p>
+				<p>7、驻店培训：谁的咖啡店铺运营团队派遣的驻点人员对店铺整体经营进行技术与管理方面的培训，最终检验并试营业，直至店铺能够独立正常营业为止。</p>
+				<h3>【开店后保障】</h3>
+				<p>1、管理保障：谁的咖啡运营团队为每一位加盟商提供专业的培训，其中包括咖啡、西餐文化、成本控制、员工管理、产品销售、市场促销、管理报告以及客户需求反馈处理等专业知识。</p>
+				<p>2、营运保障：谁的咖啡运营团队拥有着经验丰富的营销团队，为我们的每一个合作伙伴提供最好的营销支持服务及解决方案，我们的营销团队会根据每个合作店的不同情况，将谁的咖啡的经营理念与以往实践经验完美结合，帮助每个店铺挖掘最大的潜力。</p>
+				<p>3、提升形象：谁的咖啡运营团队拥有着经验丰富的营销团队，针对加盟商当地经济消费情况为整个品牌进行策划、推广。</p>
+				<p>4、配送保障：统一优价提供食品制作的主要原材料，统一原料品质并保障店铺产品品质的优良、口味的纯正。</p>	
+				<p>5、创新研发：创新在各行各业都是生存的根本，谁的咖啡更是看重创新。谁的咖啡研发团队每年投入重金在口味改进及新品的研发上面，定期推出新产品或改进产品，以使得谁的咖啡的餐品在市场上保持领先地位。</p>
+				<p>6、店务用品：谁的咖啡总部提供给加盟合作商企业VI形象系统，以及配送谁的咖啡打标餐具、统一店员服装、店内海报易拉宝、食品饮料包装、DM宣传单、会员卡等店铺经营用品。</p>
+				<p>7、设备维修：谁的咖啡加盟合作方设备一旦出现问题，谁的咖啡总部会派人上门服务，及时对设备进行检修，保证每一位谁的咖啡合作伙伴正常营业。</p>
+				<p>8、供货保障：谁的咖啡提供给加盟商的物料都是有品质保证，价格合理的产品。</p>
+			</div>
+		</section>
+	<footer>
+		<div class="foo clearfix">
+			<div class="footer_l">
+				<img src="img/27.png"/>
+			</div>
+			<div class="footer_r">
+				<ul class="clearfix">
+					<li><a href="../index.html">网站首页</a></li>
+					<li><a href="../gywm/gywm.html">关于我们</a></li>
+					<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+					<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+					<li><a href="../alzs/alzs.html">案例展示</a></li>
+					<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+					<li><a href="../zxly/zxly.html">联系我们</a></li>
+				</ul>
+				<ul class="clearfix">
+					<li><a href="#">谁的咖啡旗下品牌:</a></li>
+					<li><a href="../index.html">谁的咖啡</a></li>
+					<li><a href="#">韩式悦饮</a></li>
+				</ul>
+				<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国品牌连锁热线：400 613 6237   京ICP备17000034号</p>
+			</div>
+		</div>
+	</footer>
+	<div class="icp">
+		<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国</p>
+		<p>品牌连锁热线：400 613 6237</p>
+		<p>京ICP备17000034号</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	// JavaScript Document
+//浮动广告图片
+var floatAdImg = "img/001.jpg";
+//浮动侧栏图片
+var floatSideImg = "img/002.png";
+//打开在线沟通
+function open_online()
+{
+ window.open('zazx.html');
+}
+
+//浮动广告
+document.writeln("<div id=\"floatAd\" style=\" position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 2147483647; left: 56.5%; margin-left: -240px !important; top: 60%; margin-top: -210px !important; background:url("+floatAdImg+") no-repeat; width:300px; height:244px; cursor:pointer; display:none; \">");
+document.writeln("<div onclick=\"closeFAd();\" style=\" width:26px; height:26px; float:right;color:#fff; text-align:center;font-size: 16px;font-family: '微软雅黑';\">X</div>");
+document.writeln("<div style=\"width:300; height:244; float:right;\">");
+document.writeln("<p style=\"color: #fff;width: 150px; font-size: 16px;font-family: '微软雅黑';line-height: 20px;margin-top: 50px;\">欢迎来到谁的咖啡，请问有什么可以帮您？</p>");
+document.writeln("<a onclick=\"closeFAd();\" style=\"background:#fff;font-family: '微软雅黑';position: absolute; right: 100px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >稍后再说</a>")
+document.writeln("<a onclick=\"open_online();\" style=\"background:#FECB2E;font-family: '微软雅黑';position: absolute; right: 12px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >现在咨询</a>")
+document.writeln("</div>");
+document.writeln("</div>");
+//浮动侧栏
+document.writeln("<div id=\"floatAd1\" style=\" width:190px; height:103px; position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 99999; right:1%; top:40vh; background:url("+floatSideImg+");cursor:pointer;\" onclick=\"open_online();\"></div>");
+//关闭浮动广告
+function closeFAd()
+{
+ document.getElementById('floatAd').style.display = 'none';
+}
+//打开浮动广告
+function showFAd()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+//打开浮动窗口
+function showFloat()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+setTimeout(showFAd,2000);
+</script>

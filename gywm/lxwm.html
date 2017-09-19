@@ -1,0 +1,324 @@
+x<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>关于我们-谁的咖啡官方网站</title>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--移动设备优先            视窗                                       宽度=设备宽度                   缩放比例1倍                   最大缩放比例1倍                禁止用户缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="icon" href="img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="css/lxwm.css"/>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+		<header>
+		<div class="header">
+			<div class="logo">
+				<a href="../index.html"><img src="img/logo.png"/></a>
+			</div>
+			<div class="aa">
+				<p>24小时热线</p>
+				<p>400 613 6237</p>
+			</div>
+			<nav class="clearfix">	
+				<li><a href="../index.html">网站首页</a></li>
+				<li><a href="../gywm/gywm.html">关于我们</a></li>
+				<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+				<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+				<li><a href="../alzs/alzs.html">案例展示</a></li>
+				<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+				<li><a href="../alzs/alzs.html">在线留言</a></li>
+			</nav>
+		</div>
+	</header>
+	<div class="home">
+		<img src="img/3.png"/>
+		<div class="aa">
+			<p>START YOUR DAY WITH THE </p>
+			<p>BEST CUP OF COFFEE</p>
+		</div>
+	</div>
+	 <div class="wrap" id='wrap'>
+				 <ul id="pic">
+					 <li><img src="img/24.jpeg" alt=""></li>
+					 <li><img src="img/26.png" alt=""></li>
+				 </ul>
+				 <ol id="list">
+				 	<li class="on">1</li>
+					<li>2</li>
+				</ol>
+			</div>
+			
+			<script type="text/javascript">
+				 window.onload=function(){
+				 var wrap=document.getElementById('wrap'),
+				 pic=document.getElementById('pic').getElementsByTagName("li"),
+				 list=document.getElementById('list').getElementsByTagName('li'),
+				 index=0,
+				 timer=null;
+				 
+				 // 定义并调用自动播放函数
+				 timer = setInterval(autoPlay, 2000);
+				 
+				 // 鼠标划过整个容器时停止自动播放
+				 wrap.onmouseover = function () {
+				 clearInterval(timer);
+				 }
+				 
+				 // 鼠标离开整个容器时继续播放至下一张
+				 wrap.onmouseout = function () {
+				 timer = setInterval(autoPlay, 2000);
+				 }
+				 // 遍历所有数字导航实现划过切换至对应的图片
+				 for (var i = 0; i < list.length; i++) {
+				 list[i].onmouseover = function () {
+				 clearInterval(timer);
+				 index = this.innerText - 1;
+				 changePic(index);
+				 };
+				 };
+				 
+				 function autoPlay () {
+				 if (++index >= pic.length) index = 0;
+				 changePic(index);
+				 }
+				 
+				 // 定义图片切换函数
+				 function changePic (curIndex) {
+				 for (var i = 0; i < pic.length; ++i) {
+				 pic[i].style.display = "none";
+				 list[i].className = "";
+				 }
+				 pic[curIndex].style.display = "block";
+				 list[curIndex].className = "on";
+				 }
+				 
+				 };
+				 
+			 </script>
+	
+	
+	<section>
+		<div class="section">	
+			<ul class="clearfix">
+				<li></li>
+				<li><a href="../gywm/gywm.html">公司介绍</a></li>
+				<li><a href="../gywm/pplc.html">品牌历程</a></li>
+				<li><a href="../gywm/ppwh.html">品牌文化</a></li>
+				<li><a href="../gywm/ppln.html">品牌理念</a></li>
+				<li><a href="../gywm/whose.html">whose coffee在中国</a></li>
+				<li><a href="../gywm/lxwm.html">联系我们</a></li>
+				<li></li>
+			</ul>
+			<div class="lxwm clearfix">
+				<div class="pplc ">
+					<h3>联系我们</h3>
+					<h3>谁的咖啡(北京)国际餐饮管理有限公司 </h3>
+					<p><span>免费招商电话：400 613 6237 </span>邮箱：whosecoffee123@163.com</p>
+					<p>地址:北京大兴区荣华南路10号院荣华国际大厦3号楼1807</p>
+					<p>总部传真：010-53269040</p>
+					<p>品牌事业部：010-53399573</p>
+					<p>营运督导部：010-53675230</p> 
+					<p>顾客关系部：010-53399680</p>        
+					<p>咖啡培训学院：010-53675231</p>         
+					<p>长期聘招QQ：2511000842</p>
+					<p>媒体合作QQ：158268958</p>
+					<p>谁的咖啡官方网站 www.shuidekafei.com</p> 
+					<img src="img/lxwm.png"/>
+				</div>
+				<div class="ditu">
+					<style type="text/css">
+					    html,body{margin:0;padding:0;}
+					    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+					    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+					</style>
+					<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+					
+					  <!--百度地图容器-->
+					  <div style="width:510px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+				
+					<script type="text/javascript">
+					    //创建和初始化地图函数：
+					    function initMap(){
+					        createMap();//创建地图
+					        setMapEvent();//设置地图事件
+					        addMapControl();//向地图添加控件
+					        addMarker();//向地图中添加marker
+					    }
+					    
+					    //创建地图函数：
+					    function createMap(){
+					        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+					        var point = new BMap.Point(116.521608,39.793976);//定义一个中心点坐标
+					        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+					        window.map = map;//将map变量存储在全局
+					    }
+					    
+					    //地图事件设置函数：
+					    function setMapEvent(){
+					        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+					        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+					        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+					        map.enableKeyboard();//启用键盘上下左右键移动地图
+					    }
+					    
+					    //地图控件添加函数：
+					    function addMapControl(){
+					        //向地图中添加缩放控件
+						var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+						map.addControl(ctrl_nav);
+					        //向地图中添加缩略图控件
+						var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+						map.addControl(ctrl_ove);
+					        //向地图中添加比例尺控件
+						var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+						map.addControl(ctrl_sca);
+					    }
+					    
+					    //标注点数组
+					    var markerArr = [{title:"我的标记EWQEQWE",content:"我的备注EQWEQ",point:"116.309264|40.030388",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+							 ,{title:"我的标记",content:"我的备注",point:"116.521518|39.793969",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+							 ];
+					    //创建marker
+					    function addMarker(){
+					        for(var i=0;i<markerArr.length;i++){
+					            var json = markerArr[i];
+					            var p0 = json.point.split("|")[0];
+					            var p1 = json.point.split("|")[1];
+					            var point = new BMap.Point(p0,p1);
+								var iconImg = createIcon(json.icon);
+					            var marker = new BMap.Marker(point,{icon:iconImg});
+								var iw = createInfoWindow(i);
+								var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+								marker.setLabel(label);
+					            map.addOverlay(marker);
+					            label.setStyle({
+					                        borderColor:"#808080",
+					                        color:"#333",
+					                        cursor:"pointer"
+					            });
+								
+								(function(){
+									var index = i;
+									var _iw = createInfoWindow(i);
+									var _marker = marker;
+									_marker.addEventListener("click",function(){
+									    this.openInfoWindow(_iw);
+								    });
+								    _iw.addEventListener("open",function(){
+									    _marker.getLabel().hide();
+								    })
+								    _iw.addEventListener("close",function(){
+									    _marker.getLabel().show();
+								    })
+									label.addEventListener("click",function(){
+									    _marker.openInfoWindow(_iw);
+								    })
+									if(!!json.isOpen){
+										label.hide();
+										_marker.openInfoWindow(_iw);
+									}
+								})()
+					        }
+					    }
+					    //创建InfoWindow
+					    function createInfoWindow(i){
+					        var json = markerArr[i];
+					        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+					        return iw;
+					    }
+					    //创建一个Icon
+					    function createIcon(json){
+					        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+					        return icon;
+					    }
+					    
+					    initMap();//创建和初始化地图
+					</script>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="bb">
+		<img src="img/cen_03.gif"/>
+		<p>谁的咖啡WHOSE COFFEE为谁的咖啡（北京）国际餐饮管理有限公司其一品牌，总部在北京， 旗下还有谁的西餐、牛排、披萨、烘培等健康产业。总部拥有一支由资深营销专家组成的营销企划团队，有着丰富的市场推广经验，深诲消费者消费心理，能够不断 创新营销思想，制定出一套又一套营销和促销方案，以帮助投资者解决在经营过程中出现的各种问题。总部会不定期地发布最新、最全面的促销推广活动宣传策划方 案，在第一时间内免费送交给各终端店，帮助终端店和代理商广聚人气，扩大销售额。</p>
+		<p>“谁的咖啡WHOSE COFFEE ”总部每年投入数百万资金在全国数十家知名媒体，包括中央电视台、各省地方卫视、杂志、报纸、专业化大型门户类网站进行立体式广告投放，全广为多渠道发布 品牌信息，提升“谁的咖啡WHOSE COFFEE”品牌知名度，影响力和号召力，帮助终端店和代理商广聚人气，提升销量。目前WHOSE COFFEE在北京已有三家直营店，位于国贸的店面的开设标志着谁的咖啡在中国迈出的第一步，谁的咖啡力争在中国延whosecoffee在韩国创造的 品牌奇迹。现全面启动全国范围招商合作。中韩联手，叱咤中国咖啡业，启动中国千店联盟，谁的咖啡短期内会陆续将店面开设在全国大、中、小城市，让更多咖啡 爱好者加入WHOSE COFFEE。</p>
+	</div>
+	<footer>
+		<div class="foo clearfix">
+			<div class="footer_l">
+				<img src="img/27.png"/>
+			</div>
+			<div class="footer_r">
+				<ul class="clearfix">
+					<li><a href="../index.html">网站首页</a></li>
+					<li><a href="../gywm/gywm.html">关于我们</a></li>
+					<li><a href="../ppcp/ppcp.html">品牌产品</a></li>
+					<li><a href="../hzfs/hzfs.html">合作方式</a></li>
+					<li><a href="../alzs/alzs.html">案例展示</a></li>
+					<li><a href="../kfxy/kfxy.html">咖啡学院</a></li>
+					<li><a href="../zxly/zxly.html">联系我们</a></li>
+				</ul>
+				<ul class="clearfix">
+					<li><a href="#">谁的咖啡旗下品牌:</a></li>
+					<li><a href="../index.html">谁的咖啡</a></li>
+					<li><a href="#">韩式悦饮</a></li>
+				</ul>
+				<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国品牌连锁热线：400 613 6237   京ICP备17000034号</p>
+			</div>
+		</div>
+	</footer>
+	<div class="icp">
+		<p>©2016 谁的咖啡(北京)国际餐饮管理有限公司  版权所有  全国</p>
+		<p>品牌连锁热线：400 613 6237</p>
+		<p>京ICP备17000034号</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	// JavaScript Document
+//浮动广告图片
+var floatAdImg = "img/001.jpg";
+//浮动侧栏图片
+var floatSideImg = "img/002.png";
+//打开在线沟通
+function open_online()
+{
+ window.open('zazx.html');
+}
+
+//浮动广告
+document.writeln("<div id=\"floatAd\" style=\" position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 2147483647; left: 56.5%; margin-left: -240px !important; top: 60%; margin-top: -210px !important; background:url("+floatAdImg+") no-repeat; width:300px; height:244px; cursor:pointer; display:none; \">");
+document.writeln("<div onclick=\"closeFAd();\" style=\" width:26px; height:26px; float:right;color:#fff; text-align:center;font-size: 16px;font-family: '微软雅黑';\">X</div>");
+document.writeln("<div style=\"width:300; height:244; float:right;\">");
+document.writeln("<p style=\"color: #fff;width: 150px;margin-left:40%; font-size: 16px;font-family: '微软雅黑';line-height: 20px;margin-top: 25px;\">欢迎来到谁的咖啡，请问有什么可以帮您？</p>");
+document.writeln("<a onclick=\"closeFAd();\" style=\"background:#fff;font-family: '微软雅黑';position: absolute; right: 100px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >稍后再说</a>")
+document.writeln("<a onclick=\"open_online();\" style=\"background:#FECB2E;font-family: '微软雅黑';position: absolute; right: 12px;bottom: 12px; padding:10px 15px 10px 15px;border-radius:3px; font-size:12px;color:#000;\" >现在咨询</a>")
+document.writeln("</div>");
+document.writeln("</div>");
+//浮动侧栏
+document.writeln("<div id=\"floatAd1\" style=\" width:190px; height:103px; position:fixed !important; position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight)); z-index: 99999; right:1%; top:40vh; background:url("+floatSideImg+");cursor:pointer;\" onclick=\"open_online();\"></div>");
+//关闭浮动广告
+function closeFAd()
+{
+ document.getElementById('floatAd').style.display = 'none';
+}
+//打开浮动广告
+function showFAd()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+//打开浮动窗口
+function showFloat()
+{
+ document.getElementById('floatAd').style.display = 'block';
+}
+setTimeout(showFAd,2000);
+</script>
